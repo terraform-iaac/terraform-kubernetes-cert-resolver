@@ -10,4 +10,6 @@ resource "kubernetes_secret" "tls" {
     "tls.crt" = data.http.crt.body
     "tls.key" = data.http.key.body
   }
+
+  depends_on = [data.http.crt, data.http.key]
 }
