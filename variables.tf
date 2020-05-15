@@ -7,17 +7,11 @@ variable "namespace" {
 }
 variable "tls_name" {
   type = string
-  description = "(Required) Name for tls"
+  description = "(Required) Tls name"
 }
-variable "bucket" {
+variable "crt" {
   type = string
-  description = "(Required) Google Storage Bucket"
 }
-variable "path_crt" {
+variable "key" {
   type = string
-  description = "(Required) Path to crt file on Storage Bucket"
-}
-variable "path_key" {
-  type = string
-  description = "(Required) Path to crt file on Storage Bucket"
 }

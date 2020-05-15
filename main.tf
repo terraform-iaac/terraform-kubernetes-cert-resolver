@@ -7,9 +7,7 @@ resource "kubernetes_secret" "tls" {
     namespace = element(var.namespace, count.index)
   }
   data = {
-    "tls.crt" = data.http.crt.body
-    "tls.key" = data.http.key.body
+    "tls.crt" = var.crt
+    "tls.key" = var.key
   }
-
-  depends_on = [data.http.crt, data.http.key]
 }
