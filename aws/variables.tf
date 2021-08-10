@@ -11,13 +11,13 @@ variable "tls_name" {
 }
 variable "bucket" {
   type = string
-  description = "(Required) Google Storage Bucket"
+  description = "(Required) AWS s3 bucket name"
 }
 variable "path_crt" {
   type = string
-  description = "(Required) Path to crt file on Storage Bucket"
+  description = "(Required) Path to crt file on s3 Bucket"
 }
 variable "path_key" {
   type = string
-  description = "(Required) Path to crt file on Storage Bucket"
+  description = "(Required) Path to crt file on s3 Bucket"
 }
