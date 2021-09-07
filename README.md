@@ -18,7 +18,8 @@ Kubernetes provider | >=1.11.1 |
 ```
 # GCP
 module "tls" {
-  source = "git::https://github.com/greg-solutions/terraform_k8s_certificate_resolver.git//gcp?ref=v1.1.0"
+  source = "terraform-iaac/cert-resolver/kubernetes//gcp"
+  
   bucket = "ssl-storage"
   path_crt = "general/certificate.crt"
   path_key = "general/private.key"
@@ -28,7 +29,8 @@ module "tls" {
 
 # AWS
 module "tls" {
-  source = "git::https://github.com/greg-solutions/terraform_k8s_certificate_resolver.git//aws?ref=v1.1.0"
+  source = "terraform-iaac/cert-resolver/kubernetes//aws"
+  
   bucket = "ssl-storage"
   path_crt = "general/certificate.crt"
   path_key = "general/private.key"
@@ -38,7 +40,8 @@ module "tls" {
 
 # Without Bucket
 module "tls" {
-  source = "git::https://github.com/greg-solutions/terraform_k8s_certificate_resolver.git?ref=v1.1.0"
+  source = "terraform-iaac/cert-resolver/kubernetes"
+  
   tls_name = "wildcart.general"
   crt = var.crt
   key = var.key
