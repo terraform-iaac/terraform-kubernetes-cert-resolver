@@ -3,7 +3,7 @@ resource "kubernetes_secret" "tls" {
 
   type = "kubernetes.io/tls"
   metadata {
-    name = var.tls_name
+    name      = var.tls_name
     namespace = element(var.namespace, count.index)
   }
   data = {

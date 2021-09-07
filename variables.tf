@@ -1,12 +1,12 @@
 variable "namespace" {
-  type = list(string)
+  type        = list(string)
   description = "(Optional) Namespaces for access to this tls"
   default = [
     "default",
   ]
 }
 variable "tls_name" {
-  type = string
+  type        = string
   description = "(Required) Tls name"
 }
 variable "crt" {
